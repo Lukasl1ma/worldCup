@@ -57,13 +57,13 @@ E baixe a imagem do docker hub
 
 ### Endpoint da API
 
-```http
+```bash
     http://localhost:8087/api/v1/worldcup
 ```
 
 #### Adicionar partidas:
 
-```http
+```bash
   POST /api/v1/worldcup
 ```
 
@@ -80,31 +80,31 @@ E baixe a imagem do docker hub
 
 #### Alterar partidas:
 
-```http
+```bash
   PUT /api/v1/worldcup/:Id
 ```
 #### Excluir partidas
 
-```http
+```bash
   DELETE /api/v1/worldcup/:Id
 ```
 #### Retorna todas as partidas
 
-```http
+```bash
   GET /api/v1/worldcup
 ```
 #### Retorna todas as partidas de um time
 
-```http
+```bash
   GET /api/v1/worldcup/:time
 ```
 #### Retorna todas as partidas do dia escolhido
 
-```http
+```bash
   GET /api/v1/worldcup/dia/:dia
 ```
 #### Retorna todas as partidas do mês escolhido
 
-```http
+```bash
   GET /api/v1/worldcup/mes/:mes
 ```
