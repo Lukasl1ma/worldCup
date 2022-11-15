@@ -3,7 +3,7 @@ const partidaRoute = require('./src/route/partida.route')
 
 const app = express()
 app.use(express.json())
-app.use('/partida',partidaRoute)
+app.use('/api/v1/worldcup', partidaRoute)
 
 app.get('/',(req,res) =>{
     res.send('Hello World Cup!')

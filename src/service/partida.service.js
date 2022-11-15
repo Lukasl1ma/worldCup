@@ -1,4 +1,5 @@
-const {partida} = require('../models/Index') 
+const {partida} = require('../models/Index')
+const { Op } = require('sequelize') 
 
  const listAll = async () => {
     return item = await partida.findAll()
@@ -24,9 +25,41 @@ const remove = async partidaId =>{
     })
 }
 
+const listaTime = async time => {
+    return await partida.findAll({
+        where:{
+            [Op.or]: [
+                {time_casa: time},
+                {time_fora: time}
+            ]
+        }
+    })
+}
+
+const listaDia = async dia => {   
+    return await match.findAll({
+        where:
+            sequelize.literal(`extract(day from data_partida) = ${dia}`)
+      })
+
+}
+
+const listaMes = async mes => {   
+    return await match.findAll({
+        where:
+            sequelize.literal(`extract(month from data_partida) = ${mes}`)
+      })
+
+}
+
+
+
 module.export = {
 listAll,
 save,
 update,
-remove
+remove,
+listaTime,
+listaDia,
+listaMes
 }

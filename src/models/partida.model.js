@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         time_casa: DataTypes.STRING,
         gol_casa: DataTypes.INTEGER,
-        time_fora: DataTypes.INTEGER
+        time_fora: DataTypes.STRING,
+        gol_fora: DataTypes.INTEGER,
+        data_partida: DataTypes.DATE
     },{
         timestamps: false,
         freezeTableName: true
