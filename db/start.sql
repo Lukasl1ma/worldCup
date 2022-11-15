@@ -4,4 +4,5 @@ CREATE TABLE partida (
     gol_casa INTEGER NOT NULL,
     time_fora VARCHAR(50) NOT NULL,
     gol_fora INTEGER NOT NULL,
+    data_partida VARCHAR (10) NOT NULL
 );
